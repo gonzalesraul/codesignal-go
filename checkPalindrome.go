@@ -4,9 +4,6 @@ import (
 	"regexp"
 )
 
-// MaxLen : String constraint length (10^5)
-const MaxLen int = 100000
-
 /*
 CheckPalindrome : true if inputString is a palindrome, false otherwise.
 
@@ -37,7 +34,7 @@ Input/Output
 */
 func CheckPalindrome(inputString string) bool {
 	len := len(inputString)
-	if len == 0 || len > MaxLen || regexp.MustCompile("[A-Z]").MatchString(inputString) {
+	if len == 0 || len > 100000 || regexp.MustCompile("[A-Z]").MatchString(inputString) {
 		return false
 	}
 
