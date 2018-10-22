@@ -17,6 +17,7 @@ func TestAdjacentElementsProduct(t *testing.T) {
 		{"Valid_Expects_50", args{[]int{9, 5, 10, 2, 24, -1, -48}}, 50},
 		{"Valid_Expects_-12", args{[]int{-23, 4, -3, 8, -12}}, -12},
 		{"Valid_Expects_0", args{[]int{1, 0, 1, 0, 1000}}, 0},
+		{"Invalid_ArgsLength_Lt+2", args{[]int{1}}, 0},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
